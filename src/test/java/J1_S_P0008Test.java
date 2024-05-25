@@ -2,17 +2,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Map;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.J1_S_P0008.Counter;
 
 public class J1_S_P0008Test {
-  private static Counter counter;
+  private Counter counter;
 
-  @BeforeAll
-  public static void setup() {
+  @BeforeEach
+  public void setup() {
     counter = new Counter();
   }
 
