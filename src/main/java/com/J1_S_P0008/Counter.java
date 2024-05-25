@@ -19,24 +19,6 @@ public class Counter {
     private Map<String, Integer> wordCounter =
             new HashMap<String, Integer>();
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your content: ");
-        String content = scanner.nextLine();
-       
-        Counter counter = new Counter();
-        counter.analyze(content);
-        counter.display();
-    }
-    
-    public void display() {
-        System.out.println(wordCounter);
-        System.out.println(charCounter);
-    }
-    
     public Entry<Map<Character, Integer>, Map<String, Integer>> analyze(String content) {
         for (char ch : content.toCharArray()) {
             if (Character.isSpaceChar(ch)) continue;
